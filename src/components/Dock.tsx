@@ -21,6 +21,7 @@ import useWindowStore from "../store/window";
 
 const Dock = () => {
     const { openWindow, closeWindow, windows} = useWindowStore()
+    type WindowKey = keyof typeof windows;
 
     const dockRef = useRef<HTMLDivElement | null>(null);
 
@@ -79,14 +80,16 @@ const Dock = () => {
     const toggleApp = (app: ToggleAppPayload) => {
         // open window logic 
         if(!app.canOpen) return;
+        if (!(app.id in windows)) return;
+        const windowKey = app.id as WindowKey;
 
-        const window = windows[app.id];
+        const window = windows[windowKey];
 
         if(window.isOpen){
-            closeWindow(app.id);
+            closeWindow(windowKey);
         }
         else{
-            openWindow(app.id);
+            openWindow(windowKey);
         }
 
         //console.log(windows)
