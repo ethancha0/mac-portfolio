@@ -2,17 +2,37 @@ import { navIcons, navLinks } from '../constants'
 
 import dayjs from "dayjs";
 
+type NavLink = {
+  id: number;
+  name: string;
+  type: string;
+};
 
-const Navbar = () => {
+type NavIcon = {
+  id: number;
+  img: string;
+};
+
+type NavbarProps = {
+  title?: string;
+  links?: NavLink[];
+  icons?: NavIcon[];
+};
+
+const Navbar = ({
+  title = "Ethan's Portfolio",
+  links = navLinks,
+  icons = navIcons,
+}: NavbarProps) => {
   return (
 
     <nav>
         <div>
             <img src="/images/logo.svg"/>
-            <p className="font-bold">Ethan's Portfolio</p>
+            <p className="font-bold">{title}</p>
 
             <ul>
-                { navLinks .map(({id, name }) => (
+                {links.map(({id, name }) => (
                     <li key={id}>
                         <p>{name}</p>
 
@@ -23,7 +43,7 @@ const Navbar = () => {
 
         <div>
             <ul>
-                {navIcons.map(({id, img})=>(
+                {icons.map(({id, img})=>(
                     <li key={id}>
                         <img src={img} className="icon-hover"
                         alt={`icon-${id}`}/>
