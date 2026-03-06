@@ -4,6 +4,7 @@ import { Tooltip } from "react-tooltip";
 import { useGSAP } from "@gsap/react";
 
 import gsap from "gsap";
+import useWindowStore from "../store/window";
 
 /*
     Typical FLow:
@@ -19,6 +20,7 @@ import gsap from "gsap";
 */
 
 const Dock = () => {
+    const { openWindow, closeWindow, windows} = useWindowStore()
 
     const dockRef = useRef<HTMLDivElement | null>(null);
 
@@ -76,7 +78,18 @@ const Dock = () => {
 
     const toggleApp = (app: ToggleAppPayload) => {
         // open window logic 
-        void app;
+        if(!app.canOpen) return;
+
+        const window = windows[app.id];
+
+        if(window.isOpen){
+            closeWindow(app.id);
+        }
+        else{
+            openWindow(app.id);
+        }
+
+        //console.log(windows)
 
     };
 
