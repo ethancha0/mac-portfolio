@@ -1,14 +1,14 @@
-import React, { useRef } from 'react'
+import { useRef } from 'react'
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 
-const FONT_WEIGHTS={
+const FONT_WEIGHTS = {
     subtitle: {min: 100, max: 400, default: 100}, 
     title: {min: 400, max: 900, default: 400}
-}
+};
 
-const renderText = (text:String, className, baseWeight = 400) =>{
+const renderText = (text: string, className: string, baseWeight = 400) => {
     return [...text].map((char, i) => (
         <span 
             key={i} 
@@ -19,15 +19,22 @@ const renderText = (text:String, className, baseWeight = 400) =>{
         </span>
     ))
 
-}
+};
 
-const setupTextHover = (container, type) =>{
+const setupTextHover = (
+    container: HTMLElement | null,
+    type: keyof typeof FONT_WEIGHTS
+) => {
     if(!container) return;
 
-    const letters = container.querySelectorAll("span");
-    const {min, max, default: base} = FONT_WEIGHTS[type];
+    const letters = container.querySelectorAll<HTMLSpanElement>("span");
+    const {min, max} = FONT_WEIGHTS[type];
 
-    const animateLetter = (letter, weight, duration=0.25)=>{
+    const animateLetter = (
+        letter: HTMLSpanElement,
+        weight: number,
+        duration = 0.25
+    ) => {
         return gsap.to(letter, {
             duration, 
             ease: 'power2.out',
@@ -35,11 +42,11 @@ const setupTextHover = (container, type) =>{
         });
     };
 
-    const handleMouseMove = (e) =>{
+    const handleMouseMove = (e: MouseEvent) => {
         const { left } = container.getBoundingClientRect();
         const mouseX = e.clientX - left;
 
-        letters.forEach((letter) =>{
+        letters.forEach((letter) => {
             const {left: l, width: w} = letter.getBoundingClientRect();
             const distance = Math.abs(mouseX - (l - left + w/2));
             const intensity = Math.exp(-(distance ** 2) / 2000)
@@ -51,13 +58,13 @@ const setupTextHover = (container, type) =>{
     container.addEventListener("mousemove", handleMouseMove)
 
 
-}
+};
 
 
 const Welcome = () => {
 
-    const titleRef = useRef(null);
-    const subtitleRef = useRef(null);
+    const titleRef = useRef<HTMLHeadingElement | null>(null);
+    const subtitleRef = useRef<HTMLParagraphElement | null>(null);
 
     useGSAP(() =>{
         setupTextHover(titleRef.current, 'title');
