@@ -32,7 +32,7 @@ const Navbar = ({
             <p className="font-bold">{title}</p>
 
             <ul>
-                {links.map(({id, name }) => (
+                {links.map(({id, name }: NavLink) => (
                     <li key={id}>
                         <p>{name}</p>
 
@@ -43,7 +43,7 @@ const Navbar = ({
 
         <div>
             <ul>
-                {icons.map(({id, img})=>(
+                {icons.map(({id, img}: NavIcon)=>(
                     <li key={id}>
                         <img src={img} className="icon-hover"
                         alt={`icon-${id}`}/>
