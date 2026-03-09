@@ -5,10 +5,12 @@ import gsap from 'gsap';
 
 gsap.registerPlugin(Draggable);
 
+const WindowWrapper = <P extends object>(
+  Component: React.ComponentType<P>,
+  windowKey: string
+) => {
 
-const WindowWrapper = (Component, windowKey) => {
-
-    const Wrapped = (props) =>{
+    const Wrapped = (props: P) =>{
         const { focusWindow, windows } = useWindowStore();
         const { isOpen, zIndex} = windows[windowKey];
         const ref = useRef(null);

@@ -9,7 +9,7 @@ const FONT_WEIGHTS = {
 };
 
 const renderText = (text: string, className: string, baseWeight = 400) => {
-    return [...text].map((char, i) => (
+    return [...text].map((char: string, i: number) => (
         <span 
             key={i} 
             className={className} 
@@ -46,7 +46,7 @@ const setupTextHover = (
         const { left } = container.getBoundingClientRect();
         const mouseX = e.clientX - left;
 
-        letters.forEach((letter) => {
+        letters.forEach((letter: HTMLSpanElement) => {
             const {left: l, width: w} = letter.getBoundingClientRect();
             const distance = Math.abs(mouseX - (l - left + w/2));
             const intensity = Math.exp(-(distance ** 2) / 2000)

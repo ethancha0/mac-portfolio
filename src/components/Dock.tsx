@@ -1,4 +1,4 @@
-import { useRef } from "react"
+import { useRef, type ReactElement } from "react"
 import { dockApps } from "../constants";
 import { Tooltip } from "react-tooltip";
 import { useGSAP } from "@gsap/react";
@@ -19,7 +19,7 @@ import useWindowStore from "../store/window";
 
 */
 
-const Dock = () => {
+const Dock = (): ReactElement => {
     const { openWindow, closeWindow, windows} = useWindowStore()
     type WindowKey = keyof typeof windows;
 
@@ -77,7 +77,7 @@ const Dock = () => {
     type DockApp = (typeof dockApps)[number];
     type ToggleAppPayload = Pick<DockApp, "id" | "canOpen">;
 
-    const toggleApp = (app: ToggleAppPayload) => {
+    const toggleApp = (app: ToggleAppPayload): void => {
         // open window logic 
         if(!app.canOpen) return;
         if (!(app.id in windows)) return;
@@ -100,7 +100,7 @@ const Dock = () => {
   return (
     <section id="dock">
         <div ref={dockRef} className="dock-container">
-        {dockApps.map(({id, name, icon, canOpen}) =>(
+        {dockApps.map(({id, name, icon, canOpen}: DockApp) =>(
             <div key={id} className="relative flex justify-center">
                 <button 
                     type="button" 
