@@ -2,7 +2,7 @@ import { create } from 'zustand'
 import { immer } from "zustand/middleware/immer";
 import { INITIAL_Z_INDEX, WINDOW_CONFIG } from '../constants';
 
-type WindowKey = keyof typeof WINDOW_CONFIG;
+export type WindowKey = keyof typeof WINDOW_CONFIG;
 type WindowData = unknown;
 type WindowInstance = {
     isOpen: boolean;
