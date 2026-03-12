@@ -35,7 +35,7 @@ const Finder = () => {
                     {Object.values(locations).map((item) =>(
                         <li 
                             key={item.id}
-                            className={clsx(item.id === activeLocation.id ? "active": "not-active")} 
+                            className={clsx(item.id === activeLocation?.id ? "active": "not-active")} 
                             onClick={
                             () => setActiveLocation(item)}>
                                 <img src={item.icon} className="w-4" alt={item.name}/>
@@ -50,7 +50,7 @@ const Finder = () => {
                     {locations.work.children.map((item) =>(
                         <li 
                             key={item.id}
-                            className={clsx(item.id === activeLocation.id ? "active": "not-active")} 
+                            className={clsx(item.id === activeLocation?.id ? "active": "not-active")} 
                             onClick={
                             () => setActiveLocation(item)}>
                                 <img src={item.icon} className="w-4" alt={item.name}/>
