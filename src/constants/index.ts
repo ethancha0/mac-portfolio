@@ -37,8 +37,8 @@ const navIcons = [
 
 const dockApps = [
   {
-    id: "resume",
-    name: "Resume", // was "Finder"
+    id: "finder",
+    name: "Finder",
     icon: "finder.png",
     canOpen: true,
   },
@@ -225,7 +225,7 @@ const WORK_LOCATION = {
     // ▶ Project 1
     {
       id: 5,
-      name: "Nike Ecommerce Website Application",
+      name: "Job Aggregation & Alert Platform",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-5", // icon position inside Finder
