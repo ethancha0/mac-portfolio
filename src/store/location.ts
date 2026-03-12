@@ -7,6 +7,7 @@ const DEFAULT_LOCATION = locations.work;
 type TopLevelLocation = (typeof locations)[keyof typeof locations];
 type SubFolderLocation = typeof locations.work.children[number];
 export type Location = TopLevelLocation | SubFolderLocation | null;
+type Location = typeof DEFAULT_LOCATION | null;
 
 type LocationStore = {
     activeLocation: Location;
