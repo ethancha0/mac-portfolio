@@ -16,7 +16,7 @@ type NavIcon = {
 
 type NavbarProps = {
   title?: string;
-  links?: NavLink[];
+  links?: readonly NavLink[];
   icons?: NavIcon[];
 };
 
