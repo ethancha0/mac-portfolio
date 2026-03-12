@@ -2,7 +2,7 @@ import WindowControls from '../components/WindowControls'
 import { Search } from 'lucide-react'
 import WindowWrapper from '../hoc/WindowWrapper'
 import {locations} from "../constants/index"
-import useLocationStore from '../store/location'
+import useLocationStore, { type Location } from '../store/location'
 import clsx from 'clsx';
 import useWindowStore, { type WindowKey } from '../store/window'
 
@@ -10,13 +10,13 @@ import useWindowStore, { type WindowKey } from '../store/window'
 const Finder = () => {
     const {activeLocation, setActiveLocation} = useLocationStore();
     const {openWindow} = useWindowStore();
-    const openItem = (item) =>{
-        if (item.fileType === "pdf") return openWindow('resume')
-        if (item.kind === "folder") return setActiveLocation(item);
-        if(['fig', 'url'].includes(item.fileType) && item.href)
-            return window.open(item.hred, "_blank");
-
-        openWindow(`${item.fileType}${item.kind}` as WindowKey, item)
+    const openItem = (item: NonNullable<Location>["children"][number]) =>{
+        if (item.kind === "folder") return setActiveLocation(item as Location);
+        const file = item as Extract<NonNullable<Location>["children"][number], { fileType: string }>;
+        if (file.fileType === "pdf") return openWindow('resume');
+        if (['fig', 'url'].includes(file.fileType) && 'href' in file && file.href)
+            return window.open(file.href as string, "_blank");
+        openWindow(`${file.fileType}${file.kind}` as WindowKey, file);
     }
 
 
