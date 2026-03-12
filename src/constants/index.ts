@@ -14,7 +14,7 @@ const navLinks = [
     name: "Resume",
     type: "resume",
   },
-];
+] as const;
 
 const navIcons = [
   {
@@ -37,8 +37,8 @@ const navIcons = [
 
 const dockApps = [
   {
-    id: "finder",
-    name: "Portfolio", // was "Finder"
+    id: "resume",
+    name: "Resume", // was "Finder"
     icon: "finder.png",
     canOpen: true,
   },
