@@ -6,12 +6,11 @@ const DEFAULT_LOCATION = locations.work;
 
 type TopLevelLocation = (typeof locations)[keyof typeof locations];
 type SubFolderLocation = typeof locations.work.children[number];
-export type Location = TopLevelLocation | SubFolderLocation | null;
-type Location = typeof DEFAULT_LOCATION | null;
+export type FinderLocation = TopLevelLocation | SubFolderLocation | null;
 
 type LocationStore = {
-    activeLocation: Location;
-    setActiveLocation: (location?: Location) => void;
+    activeLocation: FinderLocation;
+    setActiveLocation: (location?: FinderLocation) => void;
     resetActiveLocation: () => void;
 };
 
