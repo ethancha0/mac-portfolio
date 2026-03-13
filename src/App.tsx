@@ -8,6 +8,7 @@ import Safari from './windows/Safari';
 import Terminal from './windows/Terminal';
 import ImageFile from './windows/ImageFile';
 import DesktopApps from './components/DesktopApps';
+import Contact from './windows/Contact';
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
       <Resume/>
       <Finder/>
       <ImageFile/>
+      <Contact/>
 
 
     </div>
