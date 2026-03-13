@@ -7,6 +7,7 @@ import Safari from './windows/Safari';
 
 import Terminal from './windows/Terminal';
 import ImageFile from './windows/ImageFile';
+import DesktopApps from './components/DesktopApps';
 
 const App = () => {
   return (
@@ -16,6 +17,8 @@ const App = () => {
       <Navbar/>
       <Welcome/>
       <Dock/>
+      <DesktopApps/>
+      
 
       <Terminal/>
       <Safari/>
