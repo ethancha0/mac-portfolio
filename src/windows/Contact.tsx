@@ -1,7 +1,7 @@
 import ContactCards from "../components/ContactCards"
 import WindowControls from "../components/WindowControls"
 import WindowWrapper from "../hoc/WindowWrapper"
-import headshot from "/public/images/headshot.jpeg"
+import headshot from "/images/headshot.jpeg"
 
 const Contact = () => {
   return (
@@ -18,7 +18,7 @@ const Contact = () => {
                     className="w-30 h-30 rounded-full" 
                     />
 
-                <h1 className="font-bold mt-4 mb-7 text-xl whitespace-nowrap">Lets make something happen.</h1>
+                <h1 className="font-bold mt-4 mb-7 text-xl whitespace-nowrap">Let's make something happen.</h1>
             </div>
 
 
