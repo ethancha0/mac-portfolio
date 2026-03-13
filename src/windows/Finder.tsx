@@ -73,9 +73,12 @@ const Finder = () => {
                             key={item.id} 
                             className={item.position}
                             onClick={() => openItem(item)}
-                        >
+                        >   
+                        <div className="cursor-pointer flex-col col-center hover:bg-gray-200 rounded-2xl h-25 w-25">
                             <img src={item.icon} alt={item.name} />
-                            <p>{item.name}</p>
+                            <p>{item.name}</p>                           
+                        </div>
+
                         </li>
                     ))}
                 </ul>  

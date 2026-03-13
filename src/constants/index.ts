@@ -225,44 +225,45 @@ const WORK_LOCATION = {
     // ▶ Project 1
     {
       id: 5,
-      name: "Job Aggregation & Alert Platform",
+      name: "Automated Job Scraper",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-5", // icon position inside Finder
-      windowPosition: "top-[5vh] left-5", // optional: Finder window position
+      windowPosition: "top-[5vh] left-5", // : Finder window position
+      desktopPosition: "top-32 right-10",
       children: [
+        /*
         {
           id: 1,
-          name: "Nike Project.txt",
+          name: "JobScraper.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
           position: "top-5 left-10",
           description: [
-            "The Nike eCommerce website is a sleek and modern platform designed for shopping the latest Nike collections.",
-            "Instead of a simple online store, it delivers an immersive experience with bold visuals, interactive product displays, and smooth navigation.",
-            "Think of it like walking into a flagship Nike store—but right from your phone or laptop.",
-            "It's built with Next.js and Tailwind, ensuring fast performance, responsive design, and a clean, premium look.",
+            "Scrapes jobs hosted on GreenHouse and alerts every 30 minutes",
           ],
         },
+        */
         {
           id: 2,
-          name: "nike.com",
+          name: "ethansjobfinder.com",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://youtu.be/fZdTYswuZjU?si=Awjl-pIst9e09_UU",
+          href: "https://www.ethansjobfinder.com",
           position: "top-10 right-20",
         },
         {
           id: 4,
-          name: "nike.png",
+          name: "product.png",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
           position: "top-52 right-80",
-          imageUrl: "/images/project-1.png",
+          imageUrl: "/images/projects/jobfinderSS.png",
         },
+        /*
         {
           id: 5,
           name: "Design.fig",
@@ -272,18 +273,21 @@ const WORK_LOCATION = {
           href: "https://google.com",
           position: "top-60 right-20",
         },
+        */
       ],
     },
 
     // ▶ Project 2
     {
       id: 6,
-      name: "AI Resume Analyzer",
+      name: "ZotMeet",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-52 right-80",
       windowPosition: "top-[20vh] left-7",
+      desktopPosition: "top-52 left-150",
       children: [
+        /*
         {
           id: 1,
           name: "AI Resume Analyzer Project.txt",
@@ -298,24 +302,26 @@ const WORK_LOCATION = {
             "It's built with Next.js and Tailwind, so it runs fast, looks professional, and works seamlessly on any device.",
           ],
         },
+        */
         {
           id: 2,
-          name: "ai-resume-analyzer.com",
+          name: "zotmeet.com",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://youtu.be/iYOz165wGkQ?si=R1hs8Legl200m0Cl",
+          href: "https://zotmeet.com",
           position: "top-20 left-20",
         },
         {
           id: 4,
-          name: "ai-resume-analyzer.png",
+          name: "zotmeet.png",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
           position: "top-52 left-80",
-          imageUrl: "/images/project-2.png",
+          imageUrl: "/images/projects/ZotMeetSS.png",
         },
+        /*
         {
           id: 5,
           name: "Design.fig",
@@ -325,18 +331,21 @@ const WORK_LOCATION = {
           href: "https://google.com",
           position: "top-60 left-5",
         },
+        */
       ],
     },
 
     // ▶ Project 3
     {
       id: 7,
-      name: "Food Delivery App",
+      name: "Stock Tracker & Market Analysis",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-80",
       windowPosition: "top-[33vh] left-7",
+      desktopPosition: "top-60 right-3",
       children: [
+        /*
         {
           id: 1,
           name: "Food Delivery App Project.txt",
@@ -351,24 +360,26 @@ const WORK_LOCATION = {
             "It’s built with React Native, so it works smoothly on both iOS and Android with a clean, modern design.",
           ],
         },
+        */
         {
           id: 2,
-          name: "food-delivery-app.com",
+          name: "signalist.com",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://youtu.be/LKrX390fJMw?si=cExkuVhf2DTV9G2-",
-          position: "top-10 right-20",
+          href: "https://signalist-stock-tracker-eight.vercel.app/",
+          position: "top-10 left-20",
         },
         {
           id: 4,
-          name: "food-delivery-app.png",
+          name: "signalist",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
-          position: "top-52 right-80",
-          imageUrl: "/images/project-3.png",
+          position: "top-32 right-10",
+          imageUrl: "/images/projects/stocktrackerSS.png",
         },
+        /*
         {
           id: 5,
           name: "Design.fig",
@@ -378,6 +389,7 @@ const WORK_LOCATION = {
           href: "https://google.com",
           position: "top-60 right-20",
         },
+        */
       ],
     },
   ],
