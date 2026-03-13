@@ -6,7 +6,8 @@ import { blogPosts } from '../constants'
 const Safari = () => {
   return (
     <>
-    <div id="window-header">
+    {/*
+    <div id="window-header ">
         <WindowControls target="safari"/>
 
         <PanelLeft className="ml-10 icon"/>
@@ -68,8 +69,9 @@ const Safari = () => {
         </div>
     </div>
 
-    
+    */}
     </>
+
   )
 }
 
