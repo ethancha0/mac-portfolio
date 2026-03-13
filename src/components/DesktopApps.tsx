@@ -27,7 +27,7 @@ const openItem = (item: typeof locations.work.children[number]) => {
                             className={`absolute pointer-events-auto ${item.desktopPosition}`}
                             onClick={() => openItem(item)}
                         >
-                            <div className="flex-col col-center">
+                            <div className="flex-col col-center cursor-pointer ">
                                 <img src={item.icon} alt={item.name} />
                                 <p className="text-white [text-shadow:_0_0_2px_var(--tw-shadow-color)] [--tw-shadow-color:theme(colors.black)]" 
                                 >
