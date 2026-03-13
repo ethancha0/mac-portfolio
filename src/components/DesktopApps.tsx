@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 import { locations } from "../constants"
 import useWindowStore from '../store/window'
@@ -6,7 +6,7 @@ import useLocationStore, {type FinderLocation } from '../store/location'
 
 
 const DesktopApps = () => {
-const {activeLocation, setActiveLocation} = useLocationStore();
+const {setActiveLocation} = useLocationStore();
 const { openWindow } = useWindowStore();
 
 
