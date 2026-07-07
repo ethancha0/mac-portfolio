@@ -29,12 +29,6 @@ const ContactCards = () => {
         </div>
     </a>
 
-    <a href="https://www.instagram.com/ethanchaoo/?hl=en" target="_blank" rel="noopener noreferrer">
-        <div className="relative bg-purple-400 h-32 rounded-3xl hover:brightness-110 transition">
-            <img src={instagram} alt="icon" className="absolute top-4 p-1 left-3 h-8"/>
-            <p className="absolute bottom-4 left-3 font-bold text-white">Instagram</p>        
-        </div>
-    </a>
 
 </div>
   )
