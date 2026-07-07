@@ -2,9 +2,6 @@ import Dock from './components/Dock'
 import Navbar from './components/Navbar'
 import Welcome from './components/Welcome'
 import Finder from './windows/Finder';
-import Resume from './windows/Resume';
-
-
 import Terminal from './windows/Terminal';
 import ImageFile from './windows/ImageFile';
 import DesktopApps from './components/DesktopApps';
@@ -23,7 +20,6 @@ const App = () => {
 
       <Terminal/>
 
-      <Resume/>
       <Finder/>
       <ImageFile/>
       <Contact/>

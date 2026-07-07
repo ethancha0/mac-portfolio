@@ -19,7 +19,7 @@ type WindowStore = {
 };
 
 const useWindowStore = create<WindowStore>()(immer((set) => ({
-    windows: WINDOW_CONFIG as Record<WindowKey, WindowInstance>, // finder, contact, resume, safari, etc
+    windows: WINDOW_CONFIG as Record<WindowKey, WindowInstance>,
     nextZIndex: INITIAL_Z_INDEX + 1,
 
     openWindow: (windowKey, data = null) => set((state) =>{

@@ -9,11 +9,6 @@ const navLinks = [
     name: "Contact",
     type: "contact",
   },
-  {
-    id: 4,
-    name: "Resume",
-    type: "resume",
-  },
 ] as const;
 
 const navIcons = [
@@ -448,25 +443,6 @@ const ABOUT_LOCATION = {
   ],
 };
 
-const RESUME_LOCATION = {
-  id: 3,
-  type: "resume",
-  name: "Resume",
-  icon: "/icons/file.svg",
-  kind: "folder",
-  children: [
-    {
-      id: 1,
-      name: "Resume.pdf",
-      icon: "/images/pdf.png",
-      kind: "file",
-      fileType: "pdf",
-      position: "top-10 left-10",
-      // href: "/your/resume/path.pdf",
-    },
-  ],
-};
-
 const TRASH_LOCATION = {
   id: 4,
   type: "trash",
@@ -498,7 +474,6 @@ const TRASH_LOCATION = {
 export const locations = {
   work: WORK_LOCATION,
   about: ABOUT_LOCATION,
-  resume: RESUME_LOCATION,
   trash: TRASH_LOCATION,
 };
 
@@ -507,7 +482,6 @@ const INITIAL_Z_INDEX = 1000;
 const WINDOW_CONFIG = {
   finder: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   safari: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   photos: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },

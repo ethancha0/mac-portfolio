@@ -13,7 +13,6 @@ const Finder = () => {
     const openItem = (item: NonNullable<FinderLocation>["children"][number]) =>{
         if (item.kind === "folder") return setActiveLocation(item as FinderLocation);
         const file = item as Extract<NonNullable<FinderLocation>["children"][number], { fileType: string }>;
-        if (file.fileType === "pdf") return openWindow('resume');
         if (['fig', 'url'].includes(file.fileType) && 'href' in file && file.href)
             return window.open(file.href as string, "_blank");
         openWindow(`${file.fileType}${file.kind}` as WindowKey, file);
