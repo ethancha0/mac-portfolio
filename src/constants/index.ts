@@ -217,175 +217,117 @@ const WORK_LOCATION = {
   icon: "/icons/work.svg",
   kind: "folder",
   children: [
-    // ▶ Project 1
     {
       id: 5,
-      name: "Automated Job Scraper",
+      name: "Experiance",
       icon: "/images/folder.png",
       kind: "folder",
-      position: "top-10 left-5", // icon position inside Finder
-      windowPosition: "top-[5vh] left-5", // : Finder window position
+      position: "top-10 left-5",
       desktopPosition: "top-32 right-10",
-      children: [
-        /*
-        {
-          id: 1,
-          name: "JobScraper.txt",
-          icon: "/images/txt.png",
-          kind: "file",
-          fileType: "txt",
-          position: "top-5 left-10",
-          description: [
-            "Scrapes jobs hosted on GreenHouse and alerts every 30 minutes",
-          ],
-        },
-        */
-        {
-          id: 2,
-          name: "ethansjobfinder.com",
-          icon: "/images/safari.png",
-          kind: "file",
-          fileType: "url",
-          href: "https://www.ethansjobfinder.com",
-          position: "top-10 right-20",
-        },
-        {
-          id: 4,
-          name: "product.png",
-          icon: "/images/image.png",
-          kind: "file",
-          fileType: "img",
-          position: "top-52 right-80",
-          imageUrl: "/images/projects/jobfinderSS.png",
-        },
-        /*
-        {
-          id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
-          kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
-          position: "top-60 right-20",
-        },
-        */
-      ],
+      children: [],
     },
-
-    // ▶ Project 2
     {
       id: 6,
-      name: "ZotMeet",
-      icon: "/images/folder.png",
-      kind: "folder",
-      position: "top-52 right-80",
-      windowPosition: "top-[20vh] left-7",
-      desktopPosition: "top-52 left-150",
-      children: [
-        /*
-        {
-          id: 1,
-          name: "AI Resume Analyzer Project.txt",
-          icon: "/images/txt.png",
-          kind: "file",
-          fileType: "txt",
-          position: "top-5 right-10",
-          description: [
-            "AI Resume Analyzer is a smart tool that helps you perfect your resume with instant feedback.",
-            "Instead of guessing what recruiters want, you get AI-powered insights on keywords, formatting, and overall impact.",
-            "Think of it like having a career coach—pointing out strengths, fixing weaknesses, and boosting your chances of landing interviews.",
-            "It's built with Next.js and Tailwind, so it runs fast, looks professional, and works seamlessly on any device.",
-          ],
-        },
-        */
-        {
-          id: 2,
-          name: "zotmeet.com",
-          icon: "/images/safari.png",
-          kind: "file",
-          fileType: "url",
-          href: "https://zotmeet.com",
-          position: "top-20 left-20",
-        },
-        {
-          id: 4,
-          name: "zotmeet.png",
-          icon: "/images/image.png",
-          kind: "file",
-          fileType: "img",
-          position: "top-52 left-80",
-          imageUrl: "/images/projects/ZotMeetSS.png",
-        },
-        /*
-        {
-          id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
-          kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
-          position: "top-60 left-5",
-        },
-        */
-      ],
-    },
-
-    // ▶ Project 3
-    {
-      id: 7,
-      name: "Stock Tracker & Market Analysis",
+      name: "Projects",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-80",
-      windowPosition: "top-[33vh] left-7",
-      desktopPosition: "top-60 right-3",
+      desktopPosition: "top-52 left-150",
       children: [
-        /*
         {
-          id: 1,
-          name: "Food Delivery App Project.txt",
-          icon: "/images/txt.png",
-          kind: "file",
-          fileType: "txt",
-          position: "top-5 left-10",
-          description: [
-            "Our Food Delivery App is a fast and convenient way to order meals from your favorite restaurants.",
-            "Instead of making calls or waiting in line, you can browse menus, customize orders, and track deliveries in real time.",
-            "Think of it like having your favorite restaurants in your pocket—ready to deliver anytime, anywhere.",
-            "It’s built with React Native, so it works smoothly on both iOS and Android with a clean, modern design.",
+          id: 8,
+          name: "Automated Job Scraper",
+          icon: "/images/folder.png",
+          kind: "folder",
+          position: "top-10 left-5",
+          windowPosition: "top-[5vh] left-5",
+          children: [
+            {
+              id: 2,
+              name: "ethansjobfinder.com",
+              icon: "/images/safari.png",
+              kind: "file",
+              fileType: "url",
+              href: "https://www.ethansjobfinder.com",
+              position: "top-10 right-20",
+            },
+            {
+              id: 4,
+              name: "product.png",
+              icon: "/images/image.png",
+              kind: "file",
+              fileType: "img",
+              position: "top-52 right-80",
+              imageUrl: "/images/projects/jobfinderSS.png",
+            },
           ],
         },
-        */
         {
-          id: 2,
-          name: "signalist.com",
-          icon: "/images/safari.png",
-          kind: "file",
-          fileType: "url",
-          href: "https://signalist-stock-tracker-eight.vercel.app/",
-          position: "top-10 left-20",
+          id: 9,
+          name: "ZotMeet",
+          icon: "/images/folder.png",
+          kind: "folder",
+          position: "top-52 right-80",
+          windowPosition: "top-[20vh] left-7",
+          children: [
+            {
+              id: 2,
+              name: "zotmeet.com",
+              icon: "/images/safari.png",
+              kind: "file",
+              fileType: "url",
+              href: "https://zotmeet.com",
+              position: "top-20 left-20",
+            },
+            {
+              id: 4,
+              name: "zotmeet.png",
+              icon: "/images/image.png",
+              kind: "file",
+              fileType: "img",
+              position: "top-52 left-80",
+              imageUrl: "/images/projects/ZotMeetSS.png",
+            },
+          ],
         },
         {
-          id: 4,
-          name: "signalist",
-          icon: "/images/image.png",
-          kind: "file",
-          fileType: "img",
-          position: "top-32 right-10",
-          imageUrl: "/images/projects/stocktrackerSS.png",
+          id: 10,
+          name: "Stock Tracker & Market Analysis",
+          icon: "/images/folder.png",
+          kind: "folder",
+          position: "top-10 left-80",
+          windowPosition: "top-[33vh] left-7",
+          children: [
+            {
+              id: 2,
+              name: "signalist.com",
+              icon: "/images/safari.png",
+              kind: "file",
+              fileType: "url",
+              href: "https://signalist-stock-tracker-eight.vercel.app/",
+              position: "top-10 left-20",
+            },
+            {
+              id: 4,
+              name: "signalist",
+              icon: "/images/image.png",
+              kind: "file",
+              fileType: "img",
+              position: "top-32 right-10",
+              imageUrl: "/images/projects/stocktrackerSS.png",
+            },
+          ],
         },
-        /*
-        {
-          id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
-          kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
-          position: "top-60 right-20",
-        },
-        */
       ],
+    },
+    {
+      id: 7,
+      name: "Leadership",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-52 right-80",
+      desktopPosition: "top-60 right-3",
+      children: [],
     },
   ],
 };

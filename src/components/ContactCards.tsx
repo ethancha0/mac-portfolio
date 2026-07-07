@@ -1,6 +1,5 @@
 import { MailIcon } from "lucide-react"
 import github from "/icons/github.svg"
-import instagram from "/icons/instagram.svg"
 import linkedin from "/icons/linkedin.svg"
 
 const ContactCards = () => {
