@@ -2,6 +2,7 @@
 
 import { locations } from "../constants"
 import useWindowStore from '../store/window'
+import type { WindowKey } from '../store/window'
 import useLocationStore, {type FinderLocation } from '../store/location'
 
 
@@ -11,6 +12,13 @@ const { openWindow } = useWindowStore();
 
 
 const openItem = (item: typeof locations.work.children[number]) => {
+    if (item.kind === "file") {
+        const windowKey =
+            item.pageType === "leadership" ? "safariLeadership" : "safariExperience";
+
+        return openWindow(windowKey as WindowKey, item);
+    }
+
     setActiveLocation(item as FinderLocation);
     openWindow('finder');
 };
@@ -31,7 +39,7 @@ const openItem = (item: typeof locations.work.children[number]) => {
                                 <img 
                                     src={item.icon} 
                                     alt={item.name} 
-                                    className="group-hover:bg-gray-500/45 rounded-2xl p-2"/>
+                                    className="size-16 object-contain group-hover:bg-gray-500/45 rounded-2xl p-2"/>
                                 <p className="text-white [text-shadow:_0_0_2px_var(--tw-shadow-color)] [--tw-shadow-color:theme(colors.black)]
                                                 group-hover:bg-blue-500 rounded-xl p-1    " 
                                 >

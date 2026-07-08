@@ -4,9 +4,21 @@ import { locations } from "../constants";
 
 const DEFAULT_LOCATION = locations.work;
 
-type TopLevelLocation = (typeof locations)[keyof typeof locations];
-type SubFolderLocation = typeof locations.work.children[number];
-export type FinderLocation = TopLevelLocation | SubFolderLocation | null;
+export type FinderItem = {
+    id: number;
+    name: string;
+    icon: string;
+    kind: string;
+    position?: string;
+    desktopPosition?: string;
+    fileType?: string;
+    href?: string;
+    imageUrl?: string;
+    pageType?: string;
+    children?: FinderItem[];
+};
+
+export type FinderLocation = (FinderItem & { children: FinderItem[] }) | null;
 
 type LocationStore = {
     activeLocation: FinderLocation;

@@ -118,7 +118,9 @@ body {
     @apply flex items-center justify-between px-4 py-3 rounded-t-lg bg-gray-50 border-b border-gray-200 select-none text-sm text-gray-400;
   }
 
-  #safari {
+  #safari,
+  #safariExperience,
+  #safariLeadership {
     @apply w-4xl absolute top-40 left-2/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
     .search {
@@ -157,6 +159,34 @@ body {
           a {
             @apply text-blue-600 text-xs hover:underline flex items-center gap-3;
           }
+        }
+      }
+    }
+
+    .webpage-placeholder {
+      @apply min-h-[520px] bg-slate-50 px-12 py-10 text-slate-900;
+
+      .eyebrow {
+        @apply text-xs font-semibold uppercase tracking-widest text-blue-600;
+      }
+
+      h1 {
+        @apply mt-3 text-4xl font-bold;
+      }
+
+      > p:not(.eyebrow) {
+        @apply mt-4 max-w-2xl text-base leading-7 text-slate-600;
+      }
+
+      .component-dropzone {
+        @apply mt-10 rounded-lg border border-dashed border-slate-300 bg-white p-8;
+
+        h2 {
+          @apply text-lg font-semibold;
+        }
+
+        p {
+          @apply mt-2 text-sm text-slate-500;
         }
       }
     }

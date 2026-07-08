@@ -2,7 +2,7 @@ import WindowControls from '../components/WindowControls'
 import { Search } from 'lucide-react'
 import WindowWrapper from '../hoc/WindowWrapper'
 import {locations} from "../constants/index"
-import useLocationStore, { type FinderLocation } from '../store/location'
+import useLocationStore, { type FinderItem, type FinderLocation } from '../store/location'
 import clsx from 'clsx';
 import useWindowStore, { type WindowKey } from '../store/window'
 
@@ -10,10 +10,16 @@ import useWindowStore, { type WindowKey } from '../store/window'
 const Finder = () => {
     const {activeLocation, setActiveLocation} = useLocationStore();
     const {openWindow} = useWindowStore();
-    const openItem = (item: NonNullable<FinderLocation>["children"][number]) =>{
-        if (item.kind === "folder") return setActiveLocation(item as FinderLocation);
-        const file = item as Extract<NonNullable<FinderLocation>["children"][number], { fileType: string }>;
-        if (['fig', 'url'].includes(file.fileType) && 'href' in file && file.href)
+    const openItem = (item: FinderItem) =>{
+        if (item.kind === "folder" && item.children) return setActiveLocation(item as FinderLocation);
+        const file = item;
+        if (file.fileType === "webpage") {
+            const windowKey =
+                file.pageType === "leadership" ? "safariLeadership" : "safariExperience";
+
+            return openWindow(windowKey as WindowKey, file);
+        }
+        if (file.fileType && ['fig', 'url'].includes(file.fileType) && 'href' in file && file.href)
             return window.open(file.href as string, "_blank");
         openWindow(`${file.fileType}${file.kind}` as WindowKey, file);
     }
@@ -36,7 +42,7 @@ const Finder = () => {
                             key={item.id}
                             className={clsx(item.id === activeLocation?.id ? "active": "not-active")} 
                             onClick={
-                            () => setActiveLocation(item)}>
+                            () => setActiveLocation(item as FinderLocation)}>
                                 <img src={item.icon} className="w-4" alt={item.name}/>
                                 <p className="text-sm font-medium truncate">{item.name}</p>
                             
@@ -50,8 +56,8 @@ const Finder = () => {
                         <li 
                             key={item.id}
                             className={clsx(item.id === activeLocation?.id ? "active": "not-active")} 
-                            onClick={
-                            () => setActiveLocation(item)}>
+                            onClick={() => openItem(item)}
+                            >
                                 <img src={item.icon} className="w-4" alt={item.name}/>
                                 <p className="text-sm font-medium truncate">{item.name}</p>
                             

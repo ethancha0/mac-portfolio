@@ -6,6 +6,7 @@ import Terminal from './windows/Terminal';
 import ImageFile from './windows/ImageFile';
 import DesktopApps from './components/DesktopApps';
 import Contact from './windows/Contact';
+import Safari, { ExperienceSafariWindow, LeadershipSafariWindow } from './windows/Safari';
 
 const App = () => {
   return (
@@ -19,6 +20,9 @@ const App = () => {
       
 
       <Terminal/>
+      <Safari/>
+      <ExperienceSafariWindow/>
+      <LeadershipSafariWindow/>
 
       <Finder/>
       <ImageFile/>
