@@ -237,7 +237,7 @@ const WORK_LOCATION = {
       children: [
         {
           id: 8,
-          name: "Automated Job Scraper",
+          name: "TraceQA",
           icon: "/images/folder.png",
           kind: "folder",
           position: "top-10 left-5",
@@ -245,21 +245,12 @@ const WORK_LOCATION = {
           children: [
             {
               id: 2,
-              name: "ethansjobfinder.com",
+              name: "github.com/ethancha0/TraceQA",
               icon: "/images/safari.png",
               kind: "file",
               fileType: "url",
-              href: "https://www.ethansjobfinder.com",
-              position: "top-10 right-20",
-            },
-            {
-              id: 4,
-              name: "product.png",
-              icon: "/images/image.png",
-              kind: "file",
-              fileType: "img",
-              position: "top-52 right-80",
-              imageUrl: "/images/projects/jobfinderSS.png",
+              href: "https://github.com/ethancha0/TraceQA",
+              position: "top-10 left-20",
             },
           ],
         },
@@ -293,7 +284,7 @@ const WORK_LOCATION = {
         },
         {
           id: 10,
-          name: "Stock Tracker & Market Analysis",
+          name: "InterviewMe",
           icon: "/images/folder.png",
           kind: "folder",
           position: "top-10 left-80",
@@ -301,21 +292,12 @@ const WORK_LOCATION = {
           children: [
             {
               id: 2,
-              name: "signalist.com",
+              name: "dsa-interviewer-pink.vercel.app",
               icon: "/images/safari.png",
               kind: "file",
               fileType: "url",
-              href: "https://signalist-stock-tracker-eight.vercel.app/",
+              href: "https://dsa-interviewer-pink.vercel.app/",
               position: "top-10 left-20",
-            },
-            {
-              id: 4,
-              name: "signalist",
-              icon: "/images/image.png",
-              kind: "file",
-              fileType: "img",
-              position: "top-32 right-10",
-              imageUrl: "/images/projects/stocktrackerSS.png",
             },
           ],
         },
