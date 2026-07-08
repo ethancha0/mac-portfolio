@@ -163,6 +163,14 @@ body {
       }
     }
 
+    .webpage-embed {
+      @apply flex justify-start items-start bg-slate-50 p-6;
+
+      iframe {
+        @apply rounded-lg border-0 bg-white;
+      }
+    }
+
     .webpage-placeholder {
       @apply min-h-[520px] bg-slate-50 px-12 py-10 text-slate-900;
 

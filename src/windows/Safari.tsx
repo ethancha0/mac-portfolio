@@ -12,9 +12,9 @@ type SafariPageData = {
 const pageContent = {
   experience: {
     title: "Experiance",
-    url: "ethanchao.dev/experiance",
-    eyebrow: "Personal webpage placeholder",
-    body: "Add your experience timeline, internships, roles, achievements, and the components you want to use for this page here.",
+    url: "/ethanchaoo",
+    embedSrc:
+      "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7473450620209778690?collapsed=1",
   },
   leadership: {
     title: "Leadership",
@@ -49,18 +49,31 @@ const Safari = ({ windowKey, defaultPageType = "experience" }: SafariProps) => {
         </div>
       </div>
 
-      <main className="webpage-placeholder">
-        <p className="eyebrow">{page.eyebrow}</p>
-        <h1>{page.title}</h1>
-        <p>{page.body}</p>
+      <main className={pageType === "experience" ? "webpage-embed" : "webpage-placeholder"}>
+        {pageType === "experience" && "embedSrc" in page ? (
+          <iframe
+            src={page.embedSrc}
+            height={628}
+            width={504}
+            frameBorder={0}
+            allowFullScreen
+            title="Embedded post"
+          />
+        ) : pageType === "leadership" ? (
+          <>
+            <p className="eyebrow">{pageContent.leadership.eyebrow}</p>
+            <h1>{pageContent.leadership.title}</h1>
+            <p>{pageContent.leadership.body}</p>
 
-        <section className="component-dropzone">
-          <h2>Component placeholder</h2>
-          <p>
-            Replace this section with your real content components when you are
-            ready.
-          </p>
-        </section>
+            <section className="component-dropzone">
+              <h2>Component placeholder</h2>
+              <p>
+                Replace this section with your real content components when you are
+                ready.
+              </p>
+            </section>
+          </>
+        ) : null}
       </main>
     </>
   );
